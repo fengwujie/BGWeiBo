@@ -1,0 +1,14 @@
+//
+//  BGWeiBo-Prefix.pch
+//  BGWeiBo
+//
+//  Created by fengwujie on 15/9/11.
+//  Copyright (c) 2015年 BG. All rights reserved.
+//
+
+#ifndef BGWeiBo_BGWeiBo_Prefix_pch
+#define BGWeiBo_BGWeiBo_Prefix_pch
+
+#define BGRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+
+#endif
