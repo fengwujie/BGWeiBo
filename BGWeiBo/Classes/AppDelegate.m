@@ -24,12 +24,28 @@
     UITabBarController *tabbarVc = [[UITabBarController alloc] init];
     self.window.rootViewController = tabbarVc;
     
+    
     //3. 设置子控制器
     UIViewController *vc1 = [[UIViewController alloc] init];
     vc1.view.backgroundColor = BGRandomColor;
+    vc1.tabBarItem.title = @"首页";
+    vc1.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
+    // 图片按原始样子显示，不自动渲染成其他颜色（如tabbarItem会默认变蓝色）
+    UIImage *homeSelectedImage = [[UIImage imageNamed:@"tabbar_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc1.tabBarItem.selectedImage = homeSelectedImage;
+    
+    //y设置文字属性
+    NSMutableDictionary *attriDict = [NSMutableDictionary dictionary];
+    attriDict[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [vc1.tabBarItem setTitleTextAttributes:attriDict forState:UIControlStateSelected];
     
     UIViewController *vc2 = [[UIViewController alloc] init];
     vc2.view.backgroundColor = BGRandomColor;
+    vc2.tabBarItem.title = @"消息";
+    vc2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
+    // 图片按原始内容显示，不做处理（如tabbarItem会默认变蓝色）
+    UIImage *messageSelectedImage = [[UIImage imageNamed:@"tabbar_message_center_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc2.tabBarItem.selectedImage = messageSelectedImage;
     
     UIViewController *vc3 = [[UIViewController alloc] init];
     vc3.view.backgroundColor = BGRandomColor;
@@ -40,7 +56,7 @@
     UIViewController *vc5 = [[UIViewController alloc] init];
     vc5.view.backgroundColor = BGRandomColor;
     
-    tabbarVc.viewControllers = @[vc1,vc2,vc3,vc4,vc5];
+    tabbarVc.viewControllers = @[vc1, vc2, vc3, vc4, vc5];
     
     [self.window makeKeyAndVisible];
     return YES;
