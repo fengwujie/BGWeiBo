@@ -7,14 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "BGHomeViewController.h"
-#import "BGMessageCenterViewController.h"
-#import "BGDiscoverViewController.h"
-#import "BGProfileViewController.h"
+#import "BGTabBarViewController.h"
 
 @interface AppDelegate ()
-
-@property (nonatomic, strong) UITabBarController *tabbarVc;
 
 @end
 
@@ -27,44 +22,14 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 2.设置根控制器
-    UITabBarController *tabbarVc = [[UITabBarController alloc] init];
+    BGTabBarViewController *tabbarVc = [[BGTabBarViewController alloc] init];
     self.window.rootViewController = tabbarVc;
-    self.tabbarVc = tabbarVc;
     
-    //3. 设置子控制器
-    BGHomeViewController *home = [[BGHomeViewController alloc] init];
-    [self addChildVc: home title:@"首页" image:@"tabbar_home" selectImage:@"tabbar_home_selected"];
-    BGMessageCenterViewController *messageCenter = [[BGMessageCenterViewController alloc] init];
-    [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectImage:@"tabbar_message_center_selected"];
-    BGDiscoverViewController *discover = [[BGDiscoverViewController alloc] init];
-    [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectImage:@"tabbar_discover_selected"];
-    BGProfileViewController *profile = [[BGProfileViewController alloc] init];
-    [self addChildVc: profile title:@"我" image:@"tabbar_profile" selectImage:@"tabbar_profile_selected"];
-    
+    // 显示根控制器
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-
-- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage
-{
-    childVc.view.backgroundColor = BGRandomColor;
-    childVc.tabBarItem.title = title;
-    childVc.tabBarItem.image = [UIImage imageNamed: image];
-    // 图片按原始样子显示，不自动渲染成其他颜色（如tabbarItem会默认变蓝色）
-    UIImage *homeSelectedImage = [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    childVc.tabBarItem.selectedImage = homeSelectedImage;
-    
-    // 设置文字属性
-    NSMutableDictionary *textAttri = [NSMutableDictionary dictionary];
-    textAttri[NSForegroundColorAttributeName] = BGColor(123, 123, 123);
-    NSMutableDictionary *selectTextAttri = [NSMutableDictionary dictionary];
-    selectTextAttri[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    [childVc.tabBarItem setTitleTextAttributes:textAttri forState:UIControlStateNormal];
-    [childVc.tabBarItem setTitleTextAttributes:selectTextAttri forState:UIControlStateSelected];
-    
-    [self.tabbarVc addChildViewController:childVc];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
