@@ -11,6 +11,10 @@
 		FD9EFAE11BA1E55800D712F3 /* BGWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAE01BA1E55800D712F3 /* BGWeiBoTests.m */; };
 		FD9EFAEE1BA1E69700D712F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */; };
 		FD9EFAEF1BA1E69700D712F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAED1BA1E69700D712F3 /* main.m */; };
+		FDB862771BA6FBF40004EE19 /* BGMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */; };
+		FDB862801BA6FEE50004EE19 /* BGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */; };
+		FDB862831BA6FF1A0004EE19 /* BGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */; };
+		FDB862861BA6FF3B0004EE19 /* BGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,14 @@
 		FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FD9EFAED1BA1E69700D712F3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD9EFAF01BA1E72500D712F3 /* BGWeiBo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BGWeiBo-Prefix.pch"; sourceTree = "<group>"; };
+		FDB862751BA6FBF40004EE19 /* BGMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMessageCenterViewController.h; sourceTree = "<group>"; };
+		FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMessageCenterViewController.m; sourceTree = "<group>"; };
+		FDB8627E1BA6FEE50004EE19 /* BGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGHomeViewController.h; sourceTree = "<group>"; };
+		FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGHomeViewController.m; sourceTree = "<group>"; };
+		FDB862811BA6FF1A0004EE19 /* BGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGProfileViewController.h; sourceTree = "<group>"; };
+		FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGProfileViewController.m; sourceTree = "<group>"; };
+		FDB862841BA6FF3B0004EE19 /* BGDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDiscoverViewController.h; sourceTree = "<group>"; };
+		FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDiscoverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,14 @@
 				FD9EFAEB1BA1E69700D712F3 /* AppDelegate.h */,
 				FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */,
 				FD9EFAED1BA1E69700D712F3 /* main.m */,
+				FDB862751BA6FBF40004EE19 /* BGMessageCenterViewController.h */,
+				FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */,
+				FDB8627E1BA6FEE50004EE19 /* BGHomeViewController.h */,
+				FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */,
+				FDB862811BA6FF1A0004EE19 /* BGProfileViewController.h */,
+				FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */,
+				FDB862841BA6FF3B0004EE19 /* BGDiscoverViewController.h */,
+				FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -217,8 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB862861BA6FF3B0004EE19 /* BGDiscoverViewController.m in Sources */,
+				FDB862771BA6FBF40004EE19 /* BGMessageCenterViewController.m in Sources */,
 				FD9EFAEF1BA1E69700D712F3 /* main.m in Sources */,
+				FDB862801BA6FEE50004EE19 /* BGHomeViewController.m in Sources */,
 				FD9EFAEE1BA1E69700D712F3 /* AppDelegate.m in Sources */,
+				FDB862831BA6FF1A0004EE19 /* BGProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +420,7 @@
 				FD9EFAE61BA1E55800D712F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD9EFAE71BA1E55800D712F3 /* Build configuration list for PBXNativeTarget "BGWeiBoTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +429,7 @@
 				FD9EFAE91BA1E55800D712F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

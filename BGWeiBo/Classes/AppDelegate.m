@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "BGHomeViewController.h"
+#import "BGMessageCenterViewController.h"
+#import "BGDiscoverViewController.h"
+#import "BGProfileViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) UITabBarController *tabbarVc;
 
 @end
 
@@ -23,43 +29,41 @@
     // 2.设置根控制器
     UITabBarController *tabbarVc = [[UITabBarController alloc] init];
     self.window.rootViewController = tabbarVc;
-    
+    self.tabbarVc = tabbarVc;
     
     //3. 设置子控制器
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    vc1.view.backgroundColor = BGRandomColor;
-    vc1.tabBarItem.title = @"首页";
-    vc1.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
-    // 图片按原始样子显示，不自动渲染成其他颜色（如tabbarItem会默认变蓝色）
-    UIImage *homeSelectedImage = [[UIImage imageNamed:@"tabbar_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc1.tabBarItem.selectedImage = homeSelectedImage;
-    
-    //y设置文字属性
-    NSMutableDictionary *attriDict = [NSMutableDictionary dictionary];
-    attriDict[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    [vc1.tabBarItem setTitleTextAttributes:attriDict forState:UIControlStateSelected];
-    
-    UIViewController *vc2 = [[UIViewController alloc] init];
-    vc2.view.backgroundColor = BGRandomColor;
-    vc2.tabBarItem.title = @"消息";
-    vc2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
-    // 图片按原始内容显示，不做处理（如tabbarItem会默认变蓝色）
-    UIImage *messageSelectedImage = [[UIImage imageNamed:@"tabbar_message_center_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc2.tabBarItem.selectedImage = messageSelectedImage;
-    
-    UIViewController *vc3 = [[UIViewController alloc] init];
-    vc3.view.backgroundColor = BGRandomColor;
-    
-    UIViewController *vc4 = [[UIViewController alloc] init];
-    vc4.view.backgroundColor = BGRandomColor;
-    
-    UIViewController *vc5 = [[UIViewController alloc] init];
-    vc5.view.backgroundColor = BGRandomColor;
-    
-    tabbarVc.viewControllers = @[vc1, vc2, vc3, vc4, vc5];
+    BGHomeViewController *home = [[BGHomeViewController alloc] init];
+    [self addChildVc: home title:@"首页" image:@"tabbar_home" selectImage:@"tabbar_home_selected"];
+    BGMessageCenterViewController *messageCenter = [[BGMessageCenterViewController alloc] init];
+    [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectImage:@"tabbar_message_center_selected"];
+    BGDiscoverViewController *discover = [[BGDiscoverViewController alloc] init];
+    [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectImage:@"tabbar_discover_selected"];
+    BGProfileViewController *profile = [[BGProfileViewController alloc] init];
+    [self addChildVc: profile title:@"我" image:@"tabbar_profile" selectImage:@"tabbar_profile_selected"];
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+
+- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage
+{
+    childVc.view.backgroundColor = BGRandomColor;
+    childVc.tabBarItem.title = title;
+    childVc.tabBarItem.image = [UIImage imageNamed: image];
+    // 图片按原始样子显示，不自动渲染成其他颜色（如tabbarItem会默认变蓝色）
+    UIImage *homeSelectedImage = [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childVc.tabBarItem.selectedImage = homeSelectedImage;
+    
+    // 设置文字属性
+    NSMutableDictionary *textAttri = [NSMutableDictionary dictionary];
+    textAttri[NSForegroundColorAttributeName] = BGColor(123, 123, 123);
+    NSMutableDictionary *selectTextAttri = [NSMutableDictionary dictionary];
+    selectTextAttri[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [childVc.tabBarItem setTitleTextAttributes:textAttri forState:UIControlStateNormal];
+    [childVc.tabBarItem setTitleTextAttributes:selectTextAttri forState:UIControlStateSelected];
+    
+    [self.tabbarVc addChildViewController:childVc];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
