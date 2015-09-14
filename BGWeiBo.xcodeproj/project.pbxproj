@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD3ABC831BA7048000F17631 /* BGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC821BA7048000F17631 /* BGTabBarViewController.m */; };
+		FD3ABCAC1BA7152500F17631 /* BGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC871BA7152500F17631 /* BGDiscoverViewController.m */; };
+		FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC8D1BA7152500F17631 /* BGHomeViewController.m */; };
+		FD3ABCAE1BA7152500F17631 /* BGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC941BA7152500F17631 /* BGTabBarViewController.m */; };
+		FD3ABCAF1BA7152500F17631 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC991BA7152500F17631 /* AppDelegate.m */; };
+		FD3ABCB01BA7152500F17631 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC9A1BA7152500F17631 /* main.m */; };
+		FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC9F1BA7152500F17631 /* BGMessageCenterViewController.m */; };
+		FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCA91BA7152500F17631 /* BGProfileViewController.m */; };
 		FD9EFAD21BA1E55800D712F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9EFAD11BA1E55800D712F3 /* Images.xcassets */; };
 		FD9EFAE11BA1E55800D712F3 /* BGWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAE01BA1E55800D712F3 /* BGWeiBoTests.m */; };
-		FD9EFAEE1BA1E69700D712F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */; };
-		FD9EFAEF1BA1E69700D712F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAED1BA1E69700D712F3 /* main.m */; };
-		FDB862771BA6FBF40004EE19 /* BGMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */; };
-		FDB862801BA6FEE50004EE19 /* BGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */; };
-		FDB862831BA6FF1A0004EE19 /* BGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */; };
-		FDB862861BA6FF3B0004EE19 /* BGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,26 +29,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD3ABC811BA7048000F17631 /* BGTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTabBarViewController.h; sourceTree = "<group>"; };
-		FD3ABC821BA7048000F17631 /* BGTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTabBarViewController.m; sourceTree = "<group>"; };
+		FD3ABC861BA7152500F17631 /* BGDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDiscoverViewController.h; sourceTree = "<group>"; };
+		FD3ABC871BA7152500F17631 /* BGDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDiscoverViewController.m; sourceTree = "<group>"; };
+		FD3ABC8C1BA7152500F17631 /* BGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGHomeViewController.h; sourceTree = "<group>"; };
+		FD3ABC8D1BA7152500F17631 /* BGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGHomeViewController.m; sourceTree = "<group>"; };
+		FD3ABC931BA7152500F17631 /* BGTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTabBarViewController.h; sourceTree = "<group>"; };
+		FD3ABC941BA7152500F17631 /* BGTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTabBarViewController.m; sourceTree = "<group>"; };
+		FD3ABC981BA7152500F17631 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD3ABC991BA7152500F17631 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD3ABC9A1BA7152500F17631 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD3ABC9E1BA7152500F17631 /* BGMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMessageCenterViewController.h; sourceTree = "<group>"; };
+		FD3ABC9F1BA7152500F17631 /* BGMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMessageCenterViewController.m; sourceTree = "<group>"; };
+		FD3ABCA81BA7152500F17631 /* BGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGProfileViewController.h; sourceTree = "<group>"; };
+		FD3ABCA91BA7152500F17631 /* BGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGProfileViewController.m; sourceTree = "<group>"; };
 		FD9EFAC11BA1E55700D712F3 /* BGWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9EFAC51BA1E55700D712F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9EFAD11BA1E55800D712F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD9EFADA1BA1E55800D712F3 /* BGWeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGWeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9EFADF1BA1E55800D712F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9EFAE01BA1E55800D712F3 /* BGWeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGWeiBoTests.m; sourceTree = "<group>"; };
-		FD9EFAEB1BA1E69700D712F3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FD9EFAED1BA1E69700D712F3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD9EFAF01BA1E72500D712F3 /* BGWeiBo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BGWeiBo-Prefix.pch"; sourceTree = "<group>"; };
-		FDB862751BA6FBF40004EE19 /* BGMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMessageCenterViewController.h; sourceTree = "<group>"; };
-		FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMessageCenterViewController.m; sourceTree = "<group>"; };
-		FDB8627E1BA6FEE50004EE19 /* BGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGHomeViewController.h; sourceTree = "<group>"; };
-		FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGHomeViewController.m; sourceTree = "<group>"; };
-		FDB862811BA6FF1A0004EE19 /* BGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGProfileViewController.h; sourceTree = "<group>"; };
-		FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGProfileViewController.m; sourceTree = "<group>"; };
-		FDB862841BA6FF3B0004EE19 /* BGDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDiscoverViewController.h; sourceTree = "<group>"; };
-		FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDiscoverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +69,229 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD3ABC841BA7152500F17631 /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC851BA7152500F17631 /* Controller */,
+				FD3ABC881BA7152500F17631 /* Model */,
+				FD3ABC891BA7152500F17631 /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		FD3ABC851BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC861BA7152500F17631 /* BGDiscoverViewController.h */,
+				FD3ABC871BA7152500F17631 /* BGDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABC881BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABC891BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3ABC8A1BA7152500F17631 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC8B1BA7152500F17631 /* Controller */,
+				FD3ABC8E1BA7152500F17631 /* Model */,
+				FD3ABC8F1BA7152500F17631 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		FD3ABC8B1BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC8C1BA7152500F17631 /* BGHomeViewController.h */,
+				FD3ABC8D1BA7152500F17631 /* BGHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABC8E1BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABC8F1BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3ABC901BA7152500F17631 /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC911BA7152500F17631 /* Category */,
+				FD3ABC921BA7152500F17631 /* Controller */,
+				FD3ABC951BA7152500F17631 /* Lib */,
+				FD3ABC961BA7152500F17631 /* Model */,
+				FD3ABC971BA7152500F17631 /* Other */,
+				FD3ABC9B1BA7152500F17631 /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		FD3ABC911BA7152500F17631 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FD3ABC921BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC931BA7152500F17631 /* BGTabBarViewController.h */,
+				FD3ABC941BA7152500F17631 /* BGTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABC951BA7152500F17631 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		FD3ABC961BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABC971BA7152500F17631 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC981BA7152500F17631 /* AppDelegate.h */,
+				FD3ABC991BA7152500F17631 /* AppDelegate.m */,
+				FD3ABC9A1BA7152500F17631 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FD3ABC9B1BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3ABC9C1BA7152500F17631 /* MessageCenter(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC9D1BA7152500F17631 /* Controller */,
+				FD3ABCA01BA7152500F17631 /* Model */,
+				FD3ABCA11BA7152500F17631 /* View */,
+			);
+			path = "MessageCenter(消息)";
+			sourceTree = "<group>";
+		};
+		FD3ABC9D1BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABC9E1BA7152500F17631 /* BGMessageCenterViewController.h */,
+				FD3ABC9F1BA7152500F17631 /* BGMessageCenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABCA01BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABCA11BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3ABCA21BA7152500F17631 /* Newfeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABCA31BA7152500F17631 /* Controller */,
+				FD3ABCA41BA7152500F17631 /* Model */,
+				FD3ABCA51BA7152500F17631 /* View */,
+			);
+			path = "Newfeature(新特性)";
+			sourceTree = "<group>";
+		};
+		FD3ABCA31BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABCA41BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABCA51BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD3ABCA61BA7152500F17631 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABCA71BA7152500F17631 /* Controller */,
+				FD3ABCAA1BA7152500F17631 /* Model */,
+				FD3ABCAB1BA7152500F17631 /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		FD3ABCA71BA7152500F17631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD3ABCA81BA7152500F17631 /* BGProfileViewController.h */,
+				FD3ABCA91BA7152500F17631 /* BGProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD3ABCAA1BA7152500F17631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD3ABCAB1BA7152500F17631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD9EFAB81BA1E55700D712F3 = {
 			isa = PBXGroup;
 			children = (
@@ -126,19 +349,12 @@
 		FD9EFAEA1BA1E69700D712F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FD9EFAEB1BA1E69700D712F3 /* AppDelegate.h */,
-				FD9EFAEC1BA1E69700D712F3 /* AppDelegate.m */,
-				FD9EFAED1BA1E69700D712F3 /* main.m */,
-				FDB862751BA6FBF40004EE19 /* BGMessageCenterViewController.h */,
-				FDB862761BA6FBF40004EE19 /* BGMessageCenterViewController.m */,
-				FDB8627E1BA6FEE50004EE19 /* BGHomeViewController.h */,
-				FDB8627F1BA6FEE50004EE19 /* BGHomeViewController.m */,
-				FDB862811BA6FF1A0004EE19 /* BGProfileViewController.h */,
-				FDB862821BA6FF1A0004EE19 /* BGProfileViewController.m */,
-				FDB862841BA6FF3B0004EE19 /* BGDiscoverViewController.h */,
-				FDB862851BA6FF3B0004EE19 /* BGDiscoverViewController.m */,
-				FD3ABC811BA7048000F17631 /* BGTabBarViewController.h */,
-				FD3ABC821BA7048000F17631 /* BGTabBarViewController.m */,
+				FD3ABC841BA7152500F17631 /* Discover(发现) */,
+				FD3ABC8A1BA7152500F17631 /* Home(首页) */,
+				FD3ABC901BA7152500F17631 /* Main(主要) */,
+				FD3ABC9C1BA7152500F17631 /* MessageCenter(消息) */,
+				FD3ABCA21BA7152500F17631 /* Newfeature(新特性) */,
+				FD3ABCA61BA7152500F17631 /* Profile(我) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -242,13 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB862861BA6FF3B0004EE19 /* BGDiscoverViewController.m in Sources */,
-				FDB862771BA6FBF40004EE19 /* BGMessageCenterViewController.m in Sources */,
-				FD3ABC831BA7048000F17631 /* BGTabBarViewController.m in Sources */,
-				FD9EFAEF1BA1E69700D712F3 /* main.m in Sources */,
-				FDB862801BA6FEE50004EE19 /* BGHomeViewController.m in Sources */,
-				FD9EFAEE1BA1E69700D712F3 /* AppDelegate.m in Sources */,
-				FDB862831BA6FF1A0004EE19 /* BGProfileViewController.m in Sources */,
+				FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */,
+				FD3ABCB01BA7152500F17631 /* main.m in Sources */,
+				FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */,
+				FD3ABCAF1BA7152500F17631 /* AppDelegate.m in Sources */,
+				FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */,
+				FD3ABCAC1BA7152500F17631 /* BGDiscoverViewController.m in Sources */,
+				FD3ABCAE1BA7152500F17631 /* BGTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
