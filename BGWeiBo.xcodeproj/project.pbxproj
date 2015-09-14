@@ -14,6 +14,9 @@
 		FD3ABCB01BA7152500F17631 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC9A1BA7152500F17631 /* main.m */; };
 		FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC9F1BA7152500F17631 /* BGMessageCenterViewController.m */; };
 		FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCA91BA7152500F17631 /* BGProfileViewController.m */; };
+		FD3ABCB51BA716FD00F17631 /* BGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB41BA716FD00F17631 /* BGNavigationController.m */; };
+		FD3ABCB81BA7196C00F17631 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */; };
+		FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */; };
 		FD9EFAD21BA1E55800D712F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9EFAD11BA1E55800D712F3 /* Images.xcassets */; };
 		FD9EFAE11BA1E55800D712F3 /* BGWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAE01BA1E55800D712F3 /* BGWeiBoTests.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,12 @@
 		FD3ABC9F1BA7152500F17631 /* BGMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMessageCenterViewController.m; sourceTree = "<group>"; };
 		FD3ABCA81BA7152500F17631 /* BGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGProfileViewController.h; sourceTree = "<group>"; };
 		FD3ABCA91BA7152500F17631 /* BGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGProfileViewController.m; sourceTree = "<group>"; };
+		FD3ABCB31BA716FD00F17631 /* BGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGNavigationController.h; sourceTree = "<group>"; };
+		FD3ABCB41BA716FD00F17631 /* BGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGNavigationController.m; sourceTree = "<group>"; };
+		FD3ABCB61BA7196C00F17631 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		FD3ABCB91BA71D2D00F17631 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		FD9EFAC11BA1E55700D712F3 /* BGWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9EFAC51BA1E55700D712F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9EFAD11BA1E55800D712F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -151,6 +160,10 @@
 		FD3ABC911BA7152500F17631 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FD3ABCB91BA71D2D00F17631 /* UIBarButtonItem+Extension.h */,
+				FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */,
+				FD3ABCB61BA7196C00F17631 /* UIView+Extension.h */,
+				FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -160,6 +173,8 @@
 			children = (
 				FD3ABC931BA7152500F17631 /* BGTabBarViewController.h */,
 				FD3ABC941BA7152500F17631 /* BGTabBarViewController.m */,
+				FD3ABCB31BA716FD00F17631 /* BGNavigationController.h */,
+				FD3ABCB41BA716FD00F17631 /* BGNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,8 +473,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3ABCB81BA7196C00F17631 /* UIView+Extension.m in Sources */,
+				FD3ABCB51BA716FD00F17631 /* BGNavigationController.m in Sources */,
 				FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */,
 				FD3ABCB01BA7152500F17631 /* main.m in Sources */,
+				FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */,
 				FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */,
 				FD3ABCAF1BA7152500F17631 /* AppDelegate.m in Sources */,
 				FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */,

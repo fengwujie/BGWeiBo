@@ -11,6 +11,7 @@
 #import "BGMessageCenterViewController.h"
 #import "BGDiscoverViewController.h"
 #import "BGProfileViewController.h"
+#import "BGNavigationController.h"
 
 @interface BGTabBarViewController ()
 
@@ -60,7 +61,7 @@
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttri forState:UIControlStateSelected];
     
     // 先把传进来的小控制器包装到一个导航控制器中
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+    BGNavigationController *nav = [[BGNavigationController alloc] initWithRootViewController:childVc];
     
     // 添加一个子控制器
     [self addChildViewController:nav];
