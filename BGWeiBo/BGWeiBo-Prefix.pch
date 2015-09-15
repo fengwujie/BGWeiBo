@@ -17,7 +17,11 @@
 //随机色
 #define BGRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
 
-
+#ifdef DEBUG // 处于开发阶段
+#define BGLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define BGLog(...)
+#endif
 
 
 #endif

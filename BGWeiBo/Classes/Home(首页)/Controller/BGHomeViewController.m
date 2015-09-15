@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置导航栏左上角的按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     
+    // 设置导航栏右上角的按钮
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
+    
+}
+
+- (void)friendSearch
+{
+    BGLog(@"friendSearch");
+}
+
+- (void) pop
+{
+    BGLog(@"pop");
 }
 
 - (void)didReceiveMemoryWarning {

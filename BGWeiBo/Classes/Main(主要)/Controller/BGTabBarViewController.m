@@ -45,8 +45,9 @@
  */
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage
 {
-    childVc.view.backgroundColor = BGRandomColor;
-    childVc.tabBarItem.title = title;
+    //childVc.view.backgroundColor = BGRandomColor;
+    //childVc.tabBarItem.title = title;
+    childVc.title = title;
     childVc.tabBarItem.image = [UIImage imageNamed: image];
     // 图片按原始样子显示，不自动渲染成其他颜色（如tabbarItem会默认变蓝色）
     UIImage *homeSelectedImage = [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
