@@ -17,6 +17,9 @@
 		FD3ABCB51BA716FD00F17631 /* BGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB41BA716FD00F17631 /* BGNavigationController.m */; };
 		FD3ABCB81BA7196C00F17631 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */; };
 		FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */; };
+		FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
+		FD896FE91BAC6EAD002C4B7C /* BGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FE71BAC6EAD002C4B7C /* BGTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		FD896FEC1BAC7069002C4B7C /* HWTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FEB1BAC7069002C4B7C /* HWTitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FD94CD561BA871400096736C /* BGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD94CD551BA871400096736C /* BGSearchBar.m */; };
 		FD9EFAD21BA1E55800D712F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9EFAD11BA1E55800D712F3 /* Images.xcassets */; };
 		FD9EFAE11BA1E55800D712F3 /* BGWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9EFAE01BA1E55800D712F3 /* BGWeiBoTests.m */; };
@@ -52,6 +55,12 @@
 		FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		FD3ABCB91BA71D2D00F17631 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		FD896FE41BAC6EAD002C4B7C /* BGDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDropdownMenu.h; sourceTree = "<group>"; };
+		FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDropdownMenu.m; sourceTree = "<group>"; };
+		FD896FE61BAC6EAD002C4B7C /* BGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTabBar.h; sourceTree = "<group>"; };
+		FD896FE71BAC6EAD002C4B7C /* BGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTabBar.m; sourceTree = "<group>"; };
+		FD896FEA1BAC7069002C4B7C /* BGTitleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTitleMenuViewController.h; sourceTree = "<group>"; };
+		FD896FEB1BAC7069002C4B7C /* HWTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTitleMenuViewController.m; sourceTree = "<group>"; };
 		FD94CD541BA8713F0096736C /* BGSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSearchBar.h; sourceTree = "<group>"; };
 		FD94CD551BA871400096736C /* BGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSearchBar.m; sourceTree = "<group>"; };
 		FD9EFAC11BA1E55700D712F3 /* BGWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +152,8 @@
 		FD3ABC8F1BA7152500F17631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD896FEA1BAC7069002C4B7C /* BGTitleMenuViewController.h */,
+				FD896FEB1BAC7069002C4B7C /* HWTitleMenuViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +220,10 @@
 		FD3ABC9B1BA7152500F17631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD896FE41BAC6EAD002C4B7C /* BGDropdownMenu.h */,
+				FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */,
+				FD896FE61BAC6EAD002C4B7C /* BGTabBar.h */,
+				FD896FE71BAC6EAD002C4B7C /* BGTabBar.m */,
 				FD94CD541BA8713F0096736C /* BGSearchBar.h */,
 				FD94CD551BA871400096736C /* BGSearchBar.m */,
 			);
@@ -478,15 +493,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */,
 				FD3ABCB81BA7196C00F17631 /* UIView+Extension.m in Sources */,
 				FD3ABCB51BA716FD00F17631 /* BGNavigationController.m in Sources */,
 				FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */,
 				FD3ABCB01BA7152500F17631 /* main.m in Sources */,
+				FD896FEC1BAC7069002C4B7C /* HWTitleMenuViewController.m in Sources */,
 				FD94CD561BA871400096736C /* BGSearchBar.m in Sources */,
 				FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */,
 				FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */,
 				FD3ABCAF1BA7152500F17631 /* AppDelegate.m in Sources */,
 				FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */,
+				FD896FE91BAC6EAD002C4B7C /* BGTabBar.m in Sources */,
 				FD3ABCAC1BA7152500F17631 /* BGDiscoverViewController.m in Sources */,
 				FD3ABCAE1BA7152500F17631 /* BGTabBarViewController.m in Sources */,
 			);

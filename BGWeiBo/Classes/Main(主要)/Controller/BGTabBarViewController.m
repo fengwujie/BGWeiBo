@@ -12,6 +12,7 @@
 #import "BGDiscoverViewController.h"
 #import "BGProfileViewController.h"
 #import "BGNavigationController.h"
+#import "BGTabBar.h"
 
 @interface BGTabBarViewController ()
 
@@ -31,7 +32,9 @@
     [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectImage:@"tabbar_discover_selected"];
     BGProfileViewController *profile = [[BGProfileViewController alloc] init];
     [self addChildVc: profile title:@"我" image:@"tabbar_profile" selectImage:@"tabbar_profile_selected"];
-    
+    // 2.更换系统自带的tabbar
+    BGTabBar *tabBar = [[BGTabBar alloc] init];
+    [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
 

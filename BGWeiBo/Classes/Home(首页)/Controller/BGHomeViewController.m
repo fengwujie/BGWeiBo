@@ -7,8 +7,10 @@
 //
 
 #import "BGHomeViewController.h"
+#import "BGTitleMenuViewController.h"
+#import "BGDropdownMenu.h"
 
-@interface BGHomeViewController ()
+@interface BGHomeViewController ()<BGDropdownMenuDelegate>
 
 @end
 
@@ -22,7 +24,51 @@
     // 设置导航栏右上角的按钮
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
     
+    
+    /* 中间的标题按钮 */
+    //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *titleButton = [[UIButton alloc] init];
+    titleButton.width = 150;
+    titleButton.height = 30;
+    //    titleButton.backgroundColor = BGRandomColor;
+    
+    // 设置图片和文字
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+    //    titleButton.imageView.backgroundColor = [UIColor redColor];
+    //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
+    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    
+    // 监听标题点击
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = titleButton;
+    // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
 }
+
+/**
+ *  标题点击
+ */
+- (void)titleClick:(UIButton *)titleButton
+{
+    // 1.创建下拉菜单
+    BGDropdownMenu *menu = [BGDropdownMenu menu];
+    menu.delegate = self;
+    
+    // 2.设置内容
+    BGTitleMenuViewController *vc = [[BGTitleMenuViewController alloc] init];
+    vc.view.height = 150;
+    vc.view.width = 150;
+    menu.contentController = vc;
+    
+    // 3.显示
+    [menu showFrom:titleButton];
+}
+
 
 - (void)friendSearch
 {
@@ -37,6 +83,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - HWDropdownMenuDelegate
+/**
+ *  下拉菜单被销毁了
+ */
+- (void)dropdownMenuDidDismiss:(BGDropdownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    // 让箭头向下
+    titleButton.selected = NO;
+}
+
+/**
+ *  下拉菜单显示了
+ */
+- (void)dropdownMenuDidShow:(BGDropdownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    // 让箭头向上
+    titleButton.selected = YES;
 }
 
 #pragma mark - Table view data source
