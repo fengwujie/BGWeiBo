@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BGTabBarViewController.h"
+#import "BGNewfeatureViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,9 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 2.设置根控制器
-    BGTabBarViewController *tabbarVc = [[BGTabBarViewController alloc] init];
-    self.window.rootViewController = tabbarVc;
+    //self.window.rootViewController = [[BGTabBarViewController alloc] init];
+    self.window.rootViewController = [[BGNewfeatureViewController alloc] init];
+    
     
     // 显示根控制器
     [self.window makeKeyAndVisible];
