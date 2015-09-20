@@ -8,6 +8,10 @@
 
 #import "BGOAuthViewController.h"
 #import "AFNetworking.h"
+#import "BGAccount.h"
+#import "BGTabBarViewController.h"
+#import "BGNewfeatureViewController.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface BGOAuthViewController () <UIWebViewDelegate>
 
@@ -48,12 +52,12 @@
 #pragma mark - webView代理方法
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-//    BGLog(@"----webViewDidFinishLoad");
+    [MBProgressHUD hideHUD];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-//    BGLog(@"----webViewDidStartLoad");
+    [MBProgressHUD showMessage:@"正在加载中......"];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -72,9 +76,16 @@
         
         // 利用code换取一个accessToken
         [self accessTokenWithCode:code];
+        
+        // 返回NO，禁止调用后面的回调页面
+        return NO;
     }
     
     return YES;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    [MBProgressHUD hideHUD];
 }
 
 /**
@@ -110,10 +121,43 @@
     params[@"code"] = code;
     
     // 3.发送请求
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         BGLog(@"请求成功-%@", responseObject);
+        
+        [MBProgressHUD hideHUD];
+        
+        // 沙盒路径
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"account.data"];
+        // 将返回来的字典转换成模型
+        BGAccount *account = [BGAccount accountWithDict:responseObject];
+        // 将模型转保存到沙盒文件中；自定义对象的存储必须用NSKeyedArchiver，不再用WriteToFile方法
+        [NSKeyedArchiver archiveRootObject:account toFile:path];
+        BGLog(@"%@", path);
+        // 切换窗口的根控制器
+        NSString *key = @"CFBundleVersion";
+        // 上一次的使用版本（存在沙盒中的版本号）
+        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+        // 当前软件的版本号（从Info.plist中获得）
+        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+        
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        if ([currentVersion isEqualToString:lastVersion]) {  //版本相同，则直接进入主界面
+            window.rootViewController = [[BGTabBarViewController alloc] init];
+        }
+        else  //版本不一样，则显示 新特性
+        {
+            window.rootViewController = [[BGNewfeatureViewController alloc] init];
+            
+            // 将当前版本号存入在沙盒中
+            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         BGLog(@"请求失败-%@", error);
+        
+        [MBProgressHUD hideHUD];
     }];
 }
 @end
