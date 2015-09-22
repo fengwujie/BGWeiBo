@@ -11,6 +11,7 @@
 #import "BGNewfeatureViewController.h"
 #import "BGOAuthViewController.h"
 #import "BGAccount.h"
+#import "BGAccountTool.h"
 
 @interface AppDelegate ()
 
@@ -25,12 +26,10 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 2.设置根控制器
-    // 沙盒路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:@"account.data"];
-    BGAccount *accout = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    // 2.1获取账号信息
+    BGAccount *account = [BGAccountTool account];
     
-    if (accout) {  // 之前登录成功过
+    if (account) {  // 之前登录成功过
         // 判断是否需要显示新特性
         //self.window.rootViewController = [[BGNewfeatureViewController alloc] init];
         NSString *key = @"CFBundleVersion";

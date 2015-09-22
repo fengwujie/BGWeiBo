@@ -12,6 +12,7 @@
 #import "BGTabBarViewController.h"
 #import "BGNewfeatureViewController.h"
 #import "MBProgressHUD+MJ.h"
+#import "BGAccountTool.h"
 
 @interface BGOAuthViewController () <UIWebViewDelegate>
 
@@ -125,15 +126,12 @@
         BGLog(@"请求成功-%@", responseObject);
         
         [MBProgressHUD hideHUD];
-        
-        // 沙盒路径
-        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *path = [doc stringByAppendingPathComponent:@"account.data"];
         // 将返回来的字典转换成模型
         BGAccount *account = [BGAccount accountWithDict:responseObject];
-        // 将模型转保存到沙盒文件中；自定义对象的存储必须用NSKeyedArchiver，不再用WriteToFile方法
-        [NSKeyedArchiver archiveRootObject:account toFile:path];
-        BGLog(@"%@", path);
+        
+        // 保存账号信息
+        [BGAccountTool saveAccount:account];
+        
         // 切换窗口的根控制器
         NSString *key = @"CFBundleVersion";
         // 上一次的使用版本（存在沙盒中的版本号）

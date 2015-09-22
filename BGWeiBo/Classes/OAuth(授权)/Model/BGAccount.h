@@ -24,6 +24,11 @@
 @property (nonatomic, copy) NSString *uid;
 
 /**
+ *  账号的创建时间，access_token的创建时间
+ */
+@property (nonatomic, strong) NSDate *create_time;
+
+/**
  *  将字典转换成模型
  *
  *  @param dict <#dict description#>

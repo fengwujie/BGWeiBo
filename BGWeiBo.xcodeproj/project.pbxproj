@@ -20,6 +20,7 @@
 		FD3ABCB51BA716FD00F17631 /* BGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB41BA716FD00F17631 /* BGNavigationController.m */; };
 		FD3ABCB81BA7196C00F17631 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */; };
 		FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */; };
+		FD830AEF1BB18913001F062C /* BGAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FD830AEE1BB18913001F062C /* BGAccountTool.m */; settings = {ASSET_TAGS = (); }; };
 		FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
 		FD896FE91BAC6EAD002C4B7C /* BGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FE71BAC6EAD002C4B7C /* BGTabBar.m */; settings = {ASSET_TAGS = (); }; };
 		FD896FEC1BAC7069002C4B7C /* BGTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FEB1BAC7069002C4B7C /* BGTitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -75,6 +76,8 @@
 		FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		FD3ABCB91BA71D2D00F17631 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		FD3ABCBA1BA71D2D00F17631 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		FD830AED1BB18912001F062C /* BGAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAccountTool.h; sourceTree = "<group>"; };
+		FD830AEE1BB18913001F062C /* BGAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAccountTool.m; sourceTree = "<group>"; };
 		FD896FE41BAC6EAD002C4B7C /* BGDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDropdownMenu.h; sourceTree = "<group>"; };
 		FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDropdownMenu.m; sourceTree = "<group>"; };
 		FD896FE61BAC6EAD002C4B7C /* BGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTabBar.h; sourceTree = "<group>"; };
@@ -388,6 +391,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FD830AEC1BB188C6001F062C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				FD830AED1BB18912001F062C /* BGAccountTool.h */,
+				FD830AEE1BB18913001F062C /* BGAccountTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		FD9EFAB81BA1E55700D712F3 = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +471,7 @@
 		FDB40BCC1BAE7528003A1356 /* OAuth(授权) */ = {
 			isa = PBXGroup;
 			children = (
+				FD830AEC1BB188C6001F062C /* Tool */,
 				FDB40BCD1BAE7528003A1356 /* Controller */,
 				FDB40BCE1BAE7528003A1356 /* Model */,
 				FDB40BCF1BAE7528003A1356 /* View */,
@@ -620,6 +633,7 @@
 				FDB40BEF1BAE7B42003A1356 /* AFURLSessionManager.m in Sources */,
 				FDB40BEC1BAE7B42003A1356 /* AFURLConnectionOperation.m in Sources */,
 				FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */,
+				FD830AEF1BB18913001F062C /* BGAccountTool.m in Sources */,
 				FDB40BE91BAE7B42003A1356 /* AFHTTPSessionManager.m in Sources */,
 				FDB40BEA1BAE7B42003A1356 /* AFNetworkReachabilityManager.m in Sources */,
 				FDB40BD21BAE78E4003A1356 /* BGOAuthViewController.m in Sources */,
