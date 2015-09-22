@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class BGAccount;
+//@class BGAccount;
+#import "BGAccount.h"
 
 @interface BGAccountTool : NSObject
 

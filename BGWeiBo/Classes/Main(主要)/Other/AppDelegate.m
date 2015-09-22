@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "BGOAuthViewController.h"
-#import "BGAccount.h"
 #import "BGAccountTool.h"
 
 @interface AppDelegate ()

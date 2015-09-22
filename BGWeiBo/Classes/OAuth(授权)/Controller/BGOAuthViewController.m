@@ -8,7 +8,6 @@
 
 #import "BGOAuthViewController.h"
 #import "AFNetworking.h"
-#import "BGAccount.h"
 #import "BGTabBarViewController.h"
 #import "BGNewfeatureViewController.h"
 #import "MBProgressHUD+MJ.h"

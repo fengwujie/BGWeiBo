@@ -9,6 +9,10 @@
 #import "BGHomeViewController.h"
 #import "BGTitleMenuViewController.h"
 #import "BGDropdownMenu.h"
+#import "AFNetworking.h"
+#import "BGAccountTool.h"
+#import "MBProgressHUD+MJ.h"
+#import "BGTitleButton.h"
 
 @interface BGHomeViewController ()<BGDropdownMenuDelegate>
 
@@ -18,6 +22,62 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 设置导航栏信息
+    [self setupNav];
+    
+    // 获得用户信息（昵称）
+    [self setupUserInfo];
+}
+/**
+ *  获得用户信息（昵称）
+ */
+-(void)setupUserInfo
+{
+    /*
+    URL：https://api.weibo.com/2/users/show.json
+    
+    请求参数：
+     access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
+     uid	false	int64	需要查询的用户ID。
+    */
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    BGAccount *account = [BGAccountTool account];
+    
+    // 2.拼接请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        BGLog(@"请求成功-%@", responseObject);
+        
+        [MBProgressHUD hideHUD];
+        // 获取名称
+        NSString *name = responseObject[@"name"];
+        // 设置名称
+        UIButton *titileButton = (UIButton *)self.navigationItem.titleView;
+        [titileButton setTitle:name forState:UIControlStateNormal];
+        
+        // 保存账号信息
+        account.name = name;
+        [BGAccountTool saveAccount:account];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        BGLog(@"请求失败-%@", error);
+        
+        [MBProgressHUD hideHUD];
+    }];
+}
+
+/**
+ *  设置导航栏内容
+ */
+- (void)setupNav
+{
     // 设置导航栏左上角的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     
@@ -26,22 +86,13 @@
     
     
     /* 中间的标题按钮 */
-    //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIButton *titleButton = [[UIButton alloc] init];
-    titleButton.width = 150;
+    BGTitleButton *titleButton = [[BGTitleButton alloc] init];
+    titleButton.width = 200;
     titleButton.height = 30;
-    //    titleButton.backgroundColor = BGRandomColor;
     
     // 设置图片和文字
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
-    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
-    //    titleButton.imageView.backgroundColor = [UIColor redColor];
-    //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
-    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    NSString *name = [BGAccountTool account].name;
+    [titleButton setTitle:name ? name : @"首页" forState:UIControlStateNormal];
     
     // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];

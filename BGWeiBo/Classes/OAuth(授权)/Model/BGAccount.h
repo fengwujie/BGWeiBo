@@ -27,6 +27,10 @@
  *  账号的创建时间，access_token的创建时间
  */
 @property (nonatomic, strong) NSDate *create_time;
+/**
+ *  用户昵称
+ */
+@property (nonatomic, copy) NSString *name;
 
 /**
  *  将字典转换成模型

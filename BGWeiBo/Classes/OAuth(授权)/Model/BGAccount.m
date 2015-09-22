@@ -34,6 +34,7 @@
     [encode encodeObject:self.expires_in forKey:@"expires_in"];
     [encode encodeObject:self.uid forKey:@"uid"];
     [encode encodeObject:self.create_time forKey:@"create_time"];
+    [encode encodeObject:self.name forKey:@"name"];
 }
 
 /**
@@ -51,6 +52,7 @@
         self.expires_in = [decode decodeObjectForKey:@"expires_in"];
         self.uid = [decode decodeObjectForKey:@"uid"];
         self.create_time = [decode decodeObjectForKey:@"create_time"];
+        self.name = [decode decodeObjectForKey:@"name"];
     }
     return self;
 }

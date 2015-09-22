@@ -7,19 +7,17 @@
 //
 
 #import "BGAccountTool.h"
-#import "BGAccount.h"
 
-#define BGAccountPath [[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.archive"]
-
+#define BGAccountFile [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"]
 @implementation BGAccountTool
 
-+(void)saveAccount:(BGAccount *)account{    
++(void)saveAccount:(BGAccount *)account{
     // 将模型转保存到沙盒文件中；自定义对象的存储必须用NSKeyedArchiver，不再用WriteToFile方法
-    [NSKeyedArchiver archiveRootObject:account toFile:BGAccountPath];
+    [NSKeyedArchiver archiveRootObject:account toFile:BGAccountFile];
 }
 
 +(BGAccount *)account{
-    BGAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:BGAccountPath];
+    BGAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:BGAccountFile];
     if (!account) return nil;
     
     // 验证账号是否过期
@@ -37,7 +35,7 @@
     NSOrderedSame 一样
     NSOrderedDescending 降序，左边>右边
      */
-    if ([expiresTime compare:now] != NSOrderedAscending) {
+    if ([now compare:expiresTime] != NSOrderedAscending) {
         return  nil;
     }
     
