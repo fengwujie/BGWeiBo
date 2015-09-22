@@ -20,6 +20,7 @@
 
 +(BGAccount *)account{
     BGAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:BGAccountPath];
+    if (!account) return nil;
     
     // 验证账号是否过期
     // 过期的秒数

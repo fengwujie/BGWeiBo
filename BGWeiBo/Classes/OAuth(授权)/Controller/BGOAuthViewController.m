@@ -132,25 +132,8 @@
         // 保存账号信息
         [BGAccountTool saveAccount:account];
         
-        // 切换窗口的根控制器
-        NSString *key = @"CFBundleVersion";
-        // 上一次的使用版本（存在沙盒中的版本号）
-        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        // 当前软件的版本号（从Info.plist中获得）
-        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-        
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        if ([currentVersion isEqualToString:lastVersion]) {  //版本相同，则直接进入主界面
-            window.rootViewController = [[BGTabBarViewController alloc] init];
-        }
-        else  //版本不一样，则显示 新特性
-        {
-            window.rootViewController = [[BGNewfeatureViewController alloc] init];
-            
-            // 将当前版本号存入在沙盒中
-            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
+        [window switchRootViewController];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         BGLog(@"请求失败-%@", error);
