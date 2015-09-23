@@ -13,12 +13,25 @@
 #import "BGAccountTool.h"
 #import "MBProgressHUD+MJ.h"
 #import "BGTitleButton.h"
+#import "UIImageView+WebCache.h"
 
 @interface BGHomeViewController ()<BGDropdownMenuDelegate>
+/**
+ *  微博数组
+ */
+@property (nonatomic, strong) NSArray *statuses;
 
 @end
 
 @implementation BGHomeViewController
+
+-(NSArray *)statuses{
+    if(_statuses==nil)
+    {
+        _statuses = [NSArray array];
+    }
+    return _statuses;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +41,48 @@
     
     // 获得用户信息（昵称）
     [self setupUserInfo];
+    
+    // 加载最新微博信息
+    [self loadNewStatus];
 }
+
+/**
+ *  加载最新微博信息
+ */
+-(void)loadNewStatus
+{
+    /*
+     URL：https://api.weibo.com/2/statuses/friends_timeline.json
+     
+     请求参数：
+     access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
+     uid	false	int64	需要查询的用户ID。
+     */
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    BGAccount *account = [BGAccountTool account];
+    
+    // 2.拼接请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"count"] = @20;   //默认是20
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        BGLog(@"请求成功-%@", responseObject);
+        [MBProgressHUD hideHUD];
+        self.statuses = responseObject[@"statuses"];
+        // 刷新表格
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        BGLog(@"请求失败-%@", error);
+        
+        [MBProgressHUD hideHUD];
+    }];
+}
+
 /**
  *  获得用户信息（昵称）
  */
@@ -159,70 +213,30 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.statuses.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"status";
+    UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
     
-    // Configure the cell...
-    
+    // 取出这行对应的微博字典
+    NSDictionary *status = self.statuses[indexPath.row];
+    // 取得这条微博的作者（用户）
+    NSDictionary *user = status[@"user"];
+    cell.textLabel.text = user[@"name"];
+    // 设置微博的文字
+    cell.detailTextLabel.text=status[@"text"];
+    //设置微博的头像
+    NSString *imageUrl = user[@"profile_image_url"];
+    UIImage *placeholder = [UIImage imageNamed:@"avatar_default_small"];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholder];
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
