@@ -22,7 +22,7 @@
 /**
  *  微博模型数组
  */
-@property (nonatomic, strong) NSArray *statuses;
+@property (nonatomic, strong) NSMutableArray *statuses;
 
 @end
 
@@ -31,7 +31,7 @@
 -(NSArray *)statuses{
     if(_statuses==nil)
     {
-        _statuses = [NSArray array];
+        _statuses = [NSMutableArray array];
     }
     return _statuses;
 }
@@ -46,7 +46,117 @@
     [self setupUserInfo];
     
     // 加载最新微博信息
-    [self loadNewStatus];
+    //[self loadNewStatus];
+    
+    // 集成刷新控件
+    [self setupRefresh];
+}
+
+/**
+ *  集成刷新控件
+ */
+-(void)setupRefresh
+{
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    // 刷新功能需要手动去调用才会刷新
+    [refresh addTarget:self action:@selector(refreshStatus:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refresh];
+    
+    // 这句代码只会显示出转转的图标，不会进行加载数据
+    [refresh beginRefreshing];
+    [self refreshStatus:refresh];
+}
+
+-(void)refreshStatus:(UIRefreshControl *)refreshControl{
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    BGAccount *account = [BGAccountTool account];
+    
+    // 2.拼接请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    //params[@"count"] = @20;   //默认是20
+    // 取出最前面的微博（即最新的微博ID，ID微博最大）
+    BGStatus *firstStatus = [self.statuses firstObject];
+    // 若指定此参数，则返回在ID比since_id更多大的微博数据
+    if (firstStatus) {
+        params[@"since_id"] = firstStatus.idstr;
+    }
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        BGLog(@"请求成功-%@", responseObject);
+        [MBProgressHUD hideHUD];
+        
+        NSArray *newStatuses = [BGStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        // 将最新的数组数据，插入到原来微博数组的前面
+        NSRange range = NSMakeRange(0, newStatuses.count);
+        NSIndexSet  *indexSex = [NSIndexSet indexSetWithIndexesInRange:range];
+        [self.statuses insertObjects:newStatuses atIndexes:indexSex];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+        [refreshControl endRefreshing];
+        
+        [self showNewStatuesCount:newStatuses.count];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        BGLog(@"请求失败-%@", error);
+        [refreshControl endRefreshing];
+        [MBProgressHUD hideHUD];
+    }];
+
+}
+
+-(void)showNewStatuesCount:(NSInteger) count
+{
+    // 1.创建label
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.width = [UIScreen mainScreen].bounds.size.width;
+    label.height = 35;
+    
+    // 2.设置其他属性
+    if (count == 0) {
+        label.text = @"没有新的微博数据，稍后再试";
+    } else {
+        label.text = [NSString stringWithFormat:@"共有%zd条新的微博数据", count];
+    }
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:16];
+    
+    
+    // 3.添加
+    label.y = 64 - label.height;
+    // 将label添加到导航控制器的view中，并且是盖在导航栏下边
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+
+    // 3.添加
+    label.y = 64 - label.height;
+    // 将label添加到导航控制器的view中，并且是盖在导航栏下边
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    // 4.动画
+    // 先利用1s的时间，让label往下移动一段距离
+    CGFloat duration = 1.0; // 动画的时间
+    [UIView animateWithDuration:duration animations:^{
+        label.transform = CGAffineTransformMakeTranslation(0, label.height);
+    } completion:^(BOOL finished) {
+        // 延迟1s后，再利用1s的时间，让label往上移动一段距离（回到一开始的状态）
+        CGFloat delay = 1.0; // 延迟1s
+        // UIViewAnimationOptionCurveLinear:匀速
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+    
+    // 如果某个动画执行完毕后，又要回到动画执行前的状态，建议使用transform来做动画
 }
 
 /**
@@ -76,8 +186,8 @@
         BGLog(@"请求成功-%@", responseObject);
         [MBProgressHUD hideHUD];
         
-        self.statuses = [BGStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        
+        NSArray *newStatuses = [BGStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        [self.statuses addObjectsFromArray:newStatuses];
         //self.statuses = responseObject[@"statuses"];
         // 刷新表格
         [self.tableView reloadData];
