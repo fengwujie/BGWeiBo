@@ -70,6 +70,8 @@
 		FD5D0F441BB1A086009CBCAD /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0F391BB1A086009CBCAD /* NSString+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
 		FD5D0F471BB1A70A009CBCAD /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0F461BB1A70A009CBCAD /* NSDate+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		FD5D0F4A1BB1B72B009CBCAD /* BGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0F491BB1B72A009CBCAD /* BGTitleButton.m */; settings = {ASSET_TAGS = (); }; };
+		FD69858F1BB6B1E800295E77 /* BGLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD69858D1BB6B1E800295E77 /* BGLoadMoreFooter.m */; settings = {ASSET_TAGS = (); }; };
+		FD6985901BB6B1E800295E77 /* BGLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD69858E1BB6B1E800295E77 /* BGLoadMoreFooter.xib */; settings = {ASSET_TAGS = (); }; };
 		FD830AEF1BB18913001F062C /* BGAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FD830AEE1BB18913001F062C /* BGAccountTool.m */; settings = {ASSET_TAGS = (); }; };
 		FD830AF21BB19458001F062C /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD830AF11BB19458001F062C /* UIWindow+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD896FE51BAC6EAD002C4B7C /* BGDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
@@ -229,6 +231,9 @@
 		FD5D0F461BB1A70A009CBCAD /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		FD5D0F481BB1B72A009CBCAD /* BGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTitleButton.h; sourceTree = "<group>"; };
 		FD5D0F491BB1B72A009CBCAD /* BGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTitleButton.m; sourceTree = "<group>"; };
+		FD69858C1BB6B1E800295E77 /* BGLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGLoadMoreFooter.h; sourceTree = "<group>"; };
+		FD69858D1BB6B1E800295E77 /* BGLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGLoadMoreFooter.m; sourceTree = "<group>"; };
+		FD69858E1BB6B1E800295E77 /* BGLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGLoadMoreFooter.xib; sourceTree = "<group>"; };
 		FD830AED1BB18912001F062C /* BGAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAccountTool.h; sourceTree = "<group>"; };
 		FD830AEE1BB18913001F062C /* BGAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAccountTool.m; sourceTree = "<group>"; };
 		FD830AF01BB19458001F062C /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
@@ -504,6 +509,9 @@
 		FD3ABC8F1BA7152500F17631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD69858C1BB6B1E800295E77 /* BGLoadMoreFooter.h */,
+				FD69858D1BB6B1E800295E77 /* BGLoadMoreFooter.m */,
+				FD69858E1BB6B1E800295E77 /* BGLoadMoreFooter.xib */,
 				FD896FEA1BAC7069002C4B7C /* BGTitleMenuViewController.h */,
 				FD896FEB1BAC7069002C4B7C /* BGTitleMenuViewController.m */,
 				FD5D0F481BB1B72A009CBCAD /* BGTitleButton.h */,
@@ -944,6 +952,7 @@
 			files = (
 				FD9EFAD21BA1E55800D712F3 /* Images.xcassets in Resources */,
 				FD11ED621BAF06A000F33D52 /* MBProgressHUD.bundle in Resources */,
+				FD6985901BB6B1E800295E77 /* BGLoadMoreFooter.xib in Resources */,
 				FD16574D1BB2EF9000282A60 /* MJRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1008,6 +1017,7 @@
 				FD1657071BB2DA4900282A60 /* UIImage+MultiFormat.m in Sources */,
 				FD1657001BB2DA4900282A60 /* SDWebImageDecoder.m in Sources */,
 				FD94CD561BA871400096736C /* BGSearchBar.m in Sources */,
+				FD69858F1BB6B1E800295E77 /* BGLoadMoreFooter.m in Sources */,
 				FDB40BE81BAE7B42003A1356 /* AFHTTPRequestOperationManager.m in Sources */,
 				FD3ABCBB1BA71D2D00F17631 /* UIBarButtonItem+Extension.m in Sources */,
 				FD1657491BB2EF9000282A60 /* MJRefreshBackStateFooter.m in Sources */,
