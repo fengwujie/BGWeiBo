@@ -54,7 +54,52 @@
     
     // 集成上拉刷新控件
     [self setupUpRefresh];
+    
+    // 获得未读数
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(setupUnreadCount) userInfo:nil repeats:YES];
+    // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
+
+/**
+ *  获得未读数
+ */
+- (void)setupUnreadCount
+{
+    //    HWLog(@"setupUnreadCount");
+    //    return;
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    BGAccount *account = [BGAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+    
+    // 3.发送请求
+    [mgr GET:@"https://rm.api.weibo.com/2/remind/unread_count.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        // 微博的未读数
+        //        int status = [responseObject[@"status"] intValue];
+        // 设置提醒数字
+        //        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", status];
+        
+        // @20 --> @"20"
+        // NSNumber --> NSString
+        // 设置提醒数字(微博的未读数)
+        NSString *status = [responseObject[@"status"] description];
+        if ([status isEqualToString:@"0"]) { // 如果是0，得清空数字
+            self.tabBarItem.badgeValue = nil;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        } else { // 非0情况
+            self.tabBarItem.badgeValue = status;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = status.intValue;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        BGLog(@"请求失败-%@", error);
+    }];
+}
+
 
 /**
  *  集成下拉刷新控件
