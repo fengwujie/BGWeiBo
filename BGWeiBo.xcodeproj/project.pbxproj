@@ -92,6 +92,14 @@
 		FDB40BED1BAE7B42003A1356 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB40BE21BAE7B42003A1356 /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		FDB40BEE1BAE7B42003A1356 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB40BE41BAE7B42003A1356 /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		FDB40BEF1BAE7B42003A1356 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB40BE61BAE7B42003A1356 /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F39B1BC6B38E00E46F43 /* BGStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F39A1BC6B38E00E46F43 /* BGStatusFrame.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F39E1BC6B69000E46F43 /* BGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F39D1BC6B69000E46F43 /* BGPhoto.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3A11BC6B81F00E46F43 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3A01BC6B81F00E46F43 /* NSString+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3A41BC6BA1D00E46F43 /* BGStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3A31BC6BA1D00E46F43 /* BGStatusCell.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3A71BC6C2BE00E46F43 /* BGStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3A61BC6C2BE00E46F43 /* BGStatusToolbar.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3AA1BC6C50800E46F43 /* BGStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3A91BC6C50800E46F43 /* BGStatusPhotoView.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3AD1BC6C64400E46F43 /* BGStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3AC1BC6C64400E46F43 /* BGStatusPhotosView.m */; settings = {ASSET_TAGS = (); }; };
+		FDC5F3B01BC6C8E800E46F43 /* BGIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */; settings = {ASSET_TAGS = (); }; };
 		FDC9F3021BAEEFD90060BB8C /* BGAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F3011BAEEFD90060BB8C /* BGAccount.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -279,6 +287,22 @@
 		FDB40BE41BAE7B42003A1356 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		FDB40BE51BAE7B42003A1356 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		FDB40BE61BAE7B42003A1356 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		FDC5F3991BC6B38E00E46F43 /* BGStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStatusFrame.h; sourceTree = "<group>"; };
+		FDC5F39A1BC6B38E00E46F43 /* BGStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStatusFrame.m; sourceTree = "<group>"; };
+		FDC5F39C1BC6B69000E46F43 /* BGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGPhoto.h; sourceTree = "<group>"; };
+		FDC5F39D1BC6B69000E46F43 /* BGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGPhoto.m; sourceTree = "<group>"; };
+		FDC5F39F1BC6B81F00E46F43 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		FDC5F3A01BC6B81F00E46F43 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		FDC5F3A21BC6BA1D00E46F43 /* BGStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStatusCell.h; sourceTree = "<group>"; };
+		FDC5F3A31BC6BA1D00E46F43 /* BGStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStatusCell.m; sourceTree = "<group>"; };
+		FDC5F3A51BC6C2BE00E46F43 /* BGStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStatusToolbar.h; sourceTree = "<group>"; };
+		FDC5F3A61BC6C2BE00E46F43 /* BGStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStatusToolbar.m; sourceTree = "<group>"; };
+		FDC5F3A81BC6C50800E46F43 /* BGStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStatusPhotoView.h; sourceTree = "<group>"; };
+		FDC5F3A91BC6C50800E46F43 /* BGStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStatusPhotoView.m; sourceTree = "<group>"; };
+		FDC5F3AB1BC6C64400E46F43 /* BGStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStatusPhotosView.h; sourceTree = "<group>"; };
+		FDC5F3AC1BC6C64400E46F43 /* BGStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStatusPhotosView.m; sourceTree = "<group>"; };
+		FDC5F3AE1BC6C8E800E46F43 /* BGIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGIconView.h; sourceTree = "<group>"; };
+		FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGIconView.m; sourceTree = "<group>"; };
 		FDC9F3001BAEEFD90060BB8C /* BGAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAccount.h; sourceTree = "<group>"; };
 		FDC9F3011BAEEFD90060BB8C /* BGAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAccount.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -505,6 +529,10 @@
 				FD16570D1BB2E08500282A60 /* BGUser.m */,
 				FD16570F1BB2E09D00282A60 /* BGStatus.h */,
 				FD1657101BB2E09D00282A60 /* BGStatus.m */,
+				FDC5F3991BC6B38E00E46F43 /* BGStatusFrame.h */,
+				FDC5F39A1BC6B38E00E46F43 /* BGStatusFrame.m */,
+				FDC5F39C1BC6B69000E46F43 /* BGPhoto.h */,
+				FDC5F39D1BC6B69000E46F43 /* BGPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -519,6 +547,14 @@
 				FD896FEB1BAC7069002C4B7C /* BGTitleMenuViewController.m */,
 				FD5D0F481BB1B72A009CBCAD /* BGTitleButton.h */,
 				FD5D0F491BB1B72A009CBCAD /* BGTitleButton.m */,
+				FDC5F3A21BC6BA1D00E46F43 /* BGStatusCell.h */,
+				FDC5F3A31BC6BA1D00E46F43 /* BGStatusCell.m */,
+				FDC5F3A51BC6C2BE00E46F43 /* BGStatusToolbar.h */,
+				FDC5F3A61BC6C2BE00E46F43 /* BGStatusToolbar.m */,
+				FDC5F3A81BC6C50800E46F43 /* BGStatusPhotoView.h */,
+				FDC5F3A91BC6C50800E46F43 /* BGStatusPhotoView.m */,
+				FDC5F3AB1BC6C64400E46F43 /* BGStatusPhotosView.h */,
+				FDC5F3AC1BC6C64400E46F43 /* BGStatusPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -547,6 +583,8 @@
 				FD3ABCB71BA7196C00F17631 /* UIView+Extension.m */,
 				FD830AF01BB19458001F062C /* UIWindow+Extension.h */,
 				FD830AF11BB19458001F062C /* UIWindow+Extension.m */,
+				FDC5F39F1BC6B81F00E46F43 /* NSString+Extension.h */,
+				FDC5F3A01BC6B81F00E46F43 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -602,6 +640,8 @@
 				FD896FE71BAC6EAD002C4B7C /* BGTabBar.m */,
 				FD94CD541BA8713F0096736C /* BGSearchBar.h */,
 				FD94CD551BA871400096736C /* BGSearchBar.m */,
+				FDC5F3AE1BC6C8E800E46F43 /* BGIconView.h */,
+				FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -981,6 +1021,7 @@
 				FD1656FC1BB2DA4900282A60 /* MKAnnotationView+WebCache.m in Sources */,
 				FD830AF21BB19458001F062C /* UIWindow+Extension.m in Sources */,
 				FD1657031BB2DA4900282A60 /* SDWebImageManager.m in Sources */,
+				FDC5F39E1BC6B69000E46F43 /* BGPhoto.m in Sources */,
 				FDB40BEC1BAE7B42003A1356 /* AFURLConnectionOperation.m in Sources */,
 				FD5D0F4A1BB1B72B009CBCAD /* BGTitleButton.m in Sources */,
 				FD896FE81BAC6EAD002C4B7C /* BGDropdownMenu.m in Sources */,
@@ -988,6 +1029,7 @@
 				FD1657511BB2EF9000282A60 /* UIView+MJExtension.m in Sources */,
 				FD1657441BB2EF9000282A60 /* MJRefreshAutoGifFooter.m in Sources */,
 				FD1657411BB2EF9000282A60 /* MJRefreshComponent.m in Sources */,
+				FDC5F39B1BC6B38E00E46F43 /* BGStatusFrame.m in Sources */,
 				FD5D0F441BB1A086009CBCAD /* NSString+MJExtension.m in Sources */,
 				FD830AEF1BB18913001F062C /* BGAccountTool.m in Sources */,
 				FDB40BE91BAE7B42003A1356 /* AFHTTPSessionManager.m in Sources */,
@@ -997,6 +1039,7 @@
 				FD5D0F431BB1A086009CBCAD /* NSObject+MJProperty.m in Sources */,
 				FD5D0F3D1BB1A086009CBCAD /* MJProperty.m in Sources */,
 				FD16574B1BB2EF9000282A60 /* MJRefreshNormalHeader.m in Sources */,
+				FDC5F3A41BC6BA1D00E46F43 /* BGStatusCell.m in Sources */,
 				FDB40BD21BAE78E4003A1356 /* BGOAuthViewController.m in Sources */,
 				FD5D0F3F1BB1A086009CBCAD /* MJPropertyType.m in Sources */,
 				FD5D0F3B1BB1A086009CBCAD /* MJExtensionConst.m in Sources */,
@@ -1008,6 +1051,7 @@
 				FD5D0F3C1BB1A086009CBCAD /* MJFoundation.m in Sources */,
 				FD3ABCB11BA7152500F17631 /* BGMessageCenterViewController.m in Sources */,
 				FDB40BEB1BAE7B42003A1356 /* AFSecurityPolicy.m in Sources */,
+				FDC5F3B01BC6C8E800E46F43 /* BGIconView.m in Sources */,
 				FD16574F1BB2EF9000282A60 /* UIScrollView+MJExtension.m in Sources */,
 				FD16570A1BB2DA4900282A60 /* UIImageView+WebCache.m in Sources */,
 				FD16573F1BB2EF9000282A60 /* MJRefreshAutoFooter.m in Sources */,
@@ -1028,7 +1072,9 @@
 				FD1657491BB2EF9000282A60 /* MJRefreshBackStateFooter.m in Sources */,
 				FD16574A1BB2EF9000282A60 /* MJRefreshGifHeader.m in Sources */,
 				FD1657431BB2EF9000282A60 /* MJRefreshHeader.m in Sources */,
+				FDC5F3AA1BC6C50800E46F43 /* BGStatusPhotoView.m in Sources */,
 				FD5D0F3E1BB1A086009CBCAD /* MJPropertyKey.m in Sources */,
+				FDC5F3A11BC6B81F00E46F43 /* NSString+Extension.m in Sources */,
 				FD1657401BB2EF9000282A60 /* MJRefreshBackFooter.m in Sources */,
 				FD1657091BB2DA4900282A60 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */,
@@ -1052,8 +1098,10 @@
 				FD1656FD1BB2DA4900282A60 /* NSData+ImageContentType.m in Sources */,
 				FD1657471BB2EF9000282A60 /* MJRefreshBackGifFooter.m in Sources */,
 				FD5D0F411BB1A086009CBCAD /* NSObject+MJCoding.m in Sources */,
+				FDC5F3A71BC6C2BE00E46F43 /* BGStatusToolbar.m in Sources */,
 				FDB40BEE1BAE7B42003A1356 /* AFURLResponseSerialization.m in Sources */,
 				FD1657021BB2DA4900282A60 /* SDWebImageDownloaderOperation.m in Sources */,
+				FDC5F3AD1BC6C64400E46F43 /* BGStatusPhotosView.m in Sources */,
 				FD3ABCAE1BA7152500F17631 /* BGTabBarViewController.m in Sources */,
 				FD1657011BB2DA4900282A60 /* SDWebImageDownloader.m in Sources */,
 				FD11ED631BAF06A000F33D52 /* MBProgressHUD.m in Sources */,
