@@ -10,7 +10,7 @@
 
 @class BGTabBar;
 
-#warning 因为BGTabBar继承自UITabBar，所以称为BGTabBar的代理，也必须实现UITabBar的代理协议
+// 因为BGTabBar继承自UITabBar，所以称为BGTabBar的代理，也必须实现UITabBar的代理协议
 @protocol BGTabBarDelegate <UITabBarDelegate>
 @optional
 - (void)tabBarDidClickPlusButton:(BGTabBar *)tabBar;

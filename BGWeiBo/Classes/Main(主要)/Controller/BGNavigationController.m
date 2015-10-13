@@ -66,7 +66,6 @@
 
 - (void)back
 {
-#warning 这里要用self，不是self.navigationController
     // 因为self本来就是一个导航控制器，self.navigationController这里是nil的
     [self popViewControllerAnimated:YES];
 }

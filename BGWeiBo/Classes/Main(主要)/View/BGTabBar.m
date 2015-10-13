@@ -45,7 +45,6 @@
 
 - (void)layoutSubviews
 {
-#warning [super layoutSubviews] 一定要调用
     [super layoutSubviews];
     
     // 1.设置加号按钮的位置

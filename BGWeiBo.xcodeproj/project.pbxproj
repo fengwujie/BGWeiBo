@@ -101,6 +101,7 @@
 		FDC5F3AD1BC6C64400E46F43 /* BGStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3AC1BC6C64400E46F43 /* BGStatusPhotosView.m */; settings = {ASSET_TAGS = (); }; };
 		FDC5F3B01BC6C8E800E46F43 /* BGIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */; settings = {ASSET_TAGS = (); }; };
 		FDC9F3021BAEEFD90060BB8C /* BGAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F3011BAEEFD90060BB8C /* BGAccount.m */; settings = {ASSET_TAGS = (); }; };
+		FDE4BADD1BCD5F9100CB983C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE4BADC1BCD5F9100CB983C /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +306,7 @@
 		FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGIconView.m; sourceTree = "<group>"; };
 		FDC9F3001BAEEFD90060BB8C /* BGAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAccount.h; sourceTree = "<group>"; };
 		FDC9F3011BAEEFD90060BB8C /* BGAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAccount.m; sourceTree = "<group>"; };
+		FDE4BADC1BCD5F9100CB983C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +789,7 @@
 		FD9EFAB81BA1E55700D712F3 = {
 			isa = PBXGroup;
 			children = (
+				FDE4BADC1BCD5F9100CB983C /* Default-568h@2x.png */,
 				FD9EFAC31BA1E55700D712F3 /* BGWeiBo */,
 				FD9EFADD1BA1E55800D712F3 /* BGWeiBoTests */,
 				FD9EFAC21BA1E55700D712F3 /* Products */,
@@ -959,7 +962,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BG;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = BG;
 				TargetAttributes = {
 					FD9EFAC01BA1E55700D712F3 = {
@@ -998,6 +1001,7 @@
 				FD9EFAD21BA1E55800D712F3 /* Images.xcassets in Resources */,
 				FD11ED621BAF06A000F33D52 /* MBProgressHUD.bundle in Resources */,
 				FD6985901BB6B1E800295E77 /* BGLoadMoreFooter.xib in Resources */,
+				FDE4BADD1BCD5F9100CB983C /* Default-568h@2x.png in Resources */,
 				FD16574D1BB2EF9000282A60 /* MJRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1148,6 +1152,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1214,7 +1219,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BGWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "d-wolves.com.BGWeiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1224,7 +1231,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BGWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "d-wolves.com.BGWeiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1243,6 +1252,7 @@
 				);
 				INFOPLIST_FILE = BGWeiBoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "d-wolves.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGWeiBo.app/BGWeiBo";
 			};
@@ -1258,6 +1268,7 @@
 				);
 				INFOPLIST_FILE = BGWeiBoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "d-wolves.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGWeiBo.app/BGWeiBo";
 			};

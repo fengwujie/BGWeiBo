@@ -24,7 +24,7 @@
 
 - (void)setBadgeValue:(NSString *)badgeValue
 {
-#warning copy
+    // setter方法，传进来的字符串，最好用调用copy方法来赋值
 //    _badgeValue = badgeValue;
     _badgeValue = [badgeValue copy];
     

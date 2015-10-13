@@ -52,8 +52,8 @@
         }
     }
     
-#warning 默认情况下，scrollView一创建出来，它里面可能就存在一些子控件了
-#warning 就算不主动添加子控件到scrollView中，scrollView内部还是可能会有一些子控件
+// 默认情况下，scrollView一创建出来，它里面可能就存在一些子控件了
+// 就算不主动添加子控件到scrollView中，scrollView内部还是可能会有一些子控件
     
     // 3.设置scrollView的其他属性
     // 如果想要某个方向上不能滚动，那么这个方向对应的尺寸数值传0即可
