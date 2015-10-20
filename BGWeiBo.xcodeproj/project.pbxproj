@@ -47,6 +47,11 @@
 		FD16574F1BB2EF9000282A60 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD16573A1BB2EF9000282A60 /* UIScrollView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
 		FD1657501BB2EF9000282A60 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FD16573C1BB2EF9000282A60 /* UIScrollView+MJRefresh.m */; settings = {ASSET_TAGS = (); }; };
 		FD1657511BB2EF9000282A60 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FD16573E1BB2EF9000282A60 /* UIView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
+		FD1C11AA1BD5F0F700B3219E /* BGComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C11A91BD5F0F700B3219E /* BGComposeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FD1C11AD1BD5F13C00B3219E /* BGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C11AC1BD5F13C00B3219E /* BGTextView.m */; settings = {ASSET_TAGS = (); }; };
+		FD1C11B01BD604F000B3219E /* BGComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C11AF1BD604F000B3219E /* BGComposePhotosView.m */; settings = {ASSET_TAGS = (); }; };
+		FD1C11B31BD6059000B3219E /* BGComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C11B21BD6059000B3219E /* BGComposeToolbar.m */; settings = {ASSET_TAGS = (); }; };
+		FD1C11B61BD6139E00B3219E /* BGEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1C11B51BD6139E00B3219E /* BGEmotionKeyboard.m */; settings = {ASSET_TAGS = (); }; };
 		FD3ABCAC1BA7152500F17631 /* BGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC871BA7152500F17631 /* BGDiscoverViewController.m */; };
 		FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC8D1BA7152500F17631 /* BGHomeViewController.m */; };
 		FD3ABCAE1BA7152500F17631 /* BGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3ABC941BA7152500F17631 /* BGTabBarViewController.m */; };
@@ -195,6 +200,16 @@
 		FD16573C1BB2EF9000282A60 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		FD16573D1BB2EF9000282A60 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		FD16573E1BB2EF9000282A60 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		FD1C11A81BD5F0F700B3219E /* BGComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGComposeViewController.h; sourceTree = "<group>"; };
+		FD1C11A91BD5F0F700B3219E /* BGComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGComposeViewController.m; sourceTree = "<group>"; };
+		FD1C11AB1BD5F13C00B3219E /* BGTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTextView.h; sourceTree = "<group>"; };
+		FD1C11AC1BD5F13C00B3219E /* BGTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTextView.m; sourceTree = "<group>"; };
+		FD1C11AE1BD604F000B3219E /* BGComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGComposePhotosView.h; sourceTree = "<group>"; };
+		FD1C11AF1BD604F000B3219E /* BGComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGComposePhotosView.m; sourceTree = "<group>"; };
+		FD1C11B11BD6059000B3219E /* BGComposeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGComposeToolbar.h; sourceTree = "<group>"; };
+		FD1C11B21BD6059000B3219E /* BGComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGComposeToolbar.m; sourceTree = "<group>"; };
+		FD1C11B41BD6139E00B3219E /* BGEmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGEmotionKeyboard.h; sourceTree = "<group>"; };
+		FD1C11B51BD6139E00B3219E /* BGEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGEmotionKeyboard.m; sourceTree = "<group>"; };
 		FD3ABC861BA7152500F17631 /* BGDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDiscoverViewController.h; sourceTree = "<group>"; };
 		FD3ABC871BA7152500F17631 /* BGDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDiscoverViewController.m; sourceTree = "<group>"; };
 		FD3ABC8C1BA7152500F17631 /* BGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGHomeViewController.h; sourceTree = "<group>"; };
@@ -472,6 +487,45 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		FD1C11A41BD5F0AD00B3219E /* Compose(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C11A51BD5F0AD00B3219E /* Controller */,
+				FD1C11A61BD5F0AD00B3219E /* Model */,
+				FD1C11A71BD5F0AD00B3219E /* View */,
+			);
+			path = "Compose(发微博)";
+			sourceTree = "<group>";
+		};
+		FD1C11A51BD5F0AD00B3219E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C11A81BD5F0F700B3219E /* BGComposeViewController.h */,
+				FD1C11A91BD5F0F700B3219E /* BGComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD1C11A61BD5F0AD00B3219E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD1C11A71BD5F0AD00B3219E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C11AE1BD604F000B3219E /* BGComposePhotosView.h */,
+				FD1C11AF1BD604F000B3219E /* BGComposePhotosView.m */,
+				FD1C11B11BD6059000B3219E /* BGComposeToolbar.h */,
+				FD1C11B21BD6059000B3219E /* BGComposeToolbar.m */,
+				FD1C11B41BD6139E00B3219E /* BGEmotionKeyboard.h */,
+				FD1C11B51BD6139E00B3219E /* BGEmotionKeyboard.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD3ABC841BA7152500F17631 /* Discover(发现) */ = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +688,8 @@
 		FD3ABC9B1BA7152500F17631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD1C11AB1BD5F13C00B3219E /* BGTextView.h */,
+				FD1C11AC1BD5F13C00B3219E /* BGTextView.m */,
 				FD8199341BBAEAA30065C039 /* BGBadgeButton.h */,
 				FD8199351BBAEAA30065C039 /* BGBadgeButton.m */,
 				FD896FE41BAC6EAD002C4B7C /* BGDropdownMenu.h */,
@@ -844,6 +900,7 @@
 		FD9EFAEA1BA1E69700D712F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FD1C11A41BD5F0AD00B3219E /* Compose(发微博) */,
 				FDB40BCC1BAE7528003A1356 /* OAuth(授权) */,
 				FD3ABC841BA7152500F17631 /* Discover(发现) */,
 				FD3ABC8A1BA7152500F17631 /* Home(首页) */,
@@ -1035,6 +1092,7 @@
 				FD1657411BB2EF9000282A60 /* MJRefreshComponent.m in Sources */,
 				FDC5F39B1BC6B38E00E46F43 /* BGStatusFrame.m in Sources */,
 				FD5D0F441BB1A086009CBCAD /* NSString+MJExtension.m in Sources */,
+				FD1C11B01BD604F000B3219E /* BGComposePhotosView.m in Sources */,
 				FD830AEF1BB18913001F062C /* BGAccountTool.m in Sources */,
 				FDB40BE91BAE7B42003A1356 /* AFHTTPSessionManager.m in Sources */,
 				FD1657081BB2DA4900282A60 /* UIImage+WebP.m in Sources */,
@@ -1046,6 +1104,7 @@
 				FDC5F3A41BC6BA1D00E46F43 /* BGStatusCell.m in Sources */,
 				FDB40BD21BAE78E4003A1356 /* BGOAuthViewController.m in Sources */,
 				FD5D0F3F1BB1A086009CBCAD /* MJPropertyType.m in Sources */,
+				FD1C11B61BD6139E00B3219E /* BGEmotionKeyboard.m in Sources */,
 				FD5D0F3B1BB1A086009CBCAD /* MJExtensionConst.m in Sources */,
 				FD16570E1BB2E08500282A60 /* BGUser.m in Sources */,
 				FD5D0F3A1BB1A086009CBCAD /* MJDictionaryCache.m in Sources */,
@@ -1063,6 +1122,7 @@
 				FDC9F3021BAEEFD90060BB8C /* BGAccount.m in Sources */,
 				FD3ABCB01BA7152500F17631 /* main.m in Sources */,
 				FD1656FE1BB2DA4900282A60 /* SDImageCache.m in Sources */,
+				FD1C11B31BD6059000B3219E /* BGComposeToolbar.m in Sources */,
 				FD1657421BB2EF9000282A60 /* MJRefreshFooter.m in Sources */,
 				FD1656FF1BB2DA4900282A60 /* SDWebImageCompat.m in Sources */,
 				FD896FEC1BAC7069002C4B7C /* BGTitleMenuViewController.m in Sources */,
@@ -1083,6 +1143,7 @@
 				FD1657091BB2DA4900282A60 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FD3ABCB21BA7152500F17631 /* BGProfileViewController.m in Sources */,
 				FD3ABCAF1BA7152500F17631 /* AppDelegate.m in Sources */,
+				FD1C11AD1BD5F13C00B3219E /* BGTextView.m in Sources */,
 				FD11ED611BAF06A000F33D52 /* MBProgressHUD+MJ.m in Sources */,
 				FD5D0F421BB1A086009CBCAD /* NSObject+MJKeyValue.m in Sources */,
 				FD16574C1BB2EF9000282A60 /* MJRefreshStateHeader.m in Sources */,
@@ -1100,6 +1161,7 @@
 				FD8199361BBAEAA30065C039 /* BGBadgeButton.m in Sources */,
 				FD1657111BB2E09E00282A60 /* BGStatus.m in Sources */,
 				FD1656FD1BB2DA4900282A60 /* NSData+ImageContentType.m in Sources */,
+				FD1C11AA1BD5F0F700B3219E /* BGComposeViewController.m in Sources */,
 				FD1657471BB2EF9000282A60 /* MJRefreshBackGifFooter.m in Sources */,
 				FD5D0F411BB1A086009CBCAD /* NSObject+MJCoding.m in Sources */,
 				FDC5F3A71BC6C2BE00E46F43 /* BGStatusToolbar.m in Sources */,

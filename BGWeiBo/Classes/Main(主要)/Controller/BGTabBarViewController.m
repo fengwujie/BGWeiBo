@@ -13,6 +13,7 @@
 #import "BGProfileViewController.h"
 #import "BGNavigationController.h"
 #import "BGTabBar.h"
+#import "BGComposeViewController.h"
 
 @interface BGTabBarViewController ()<BGTabBarDelegate>
 
@@ -93,8 +94,8 @@
  *  @param tabBar <#tabBar description#>
  */
 -(void)tabBarDidClickPlusButton:(BGTabBar *)tabBar{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    [self presentViewController:vc animated:YES completion:nil];
+    BGComposeViewController *compose = [[BGComposeViewController alloc] init];
+    BGNavigationController *nav = [[BGNavigationController alloc] initWithRootViewController:compose];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 @end

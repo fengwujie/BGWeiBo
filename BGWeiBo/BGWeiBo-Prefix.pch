@@ -26,5 +26,8 @@
 #define BGLog(...)
 #endif
 
+// 通知中心
+#define BGNotificationCenter [NSNotificationCenter defaultCenter]
+
 
 #endif
