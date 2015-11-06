@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD02B9601BDF52650071F49A /* BGEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD02B95F1BDF52650071F49A /* BGEmotionListView.m */; settings = {ASSET_TAGS = (); }; };
+		FD02B9631BDF52AB0071F49A /* BGEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD02B9621BDF52AB0071F49A /* BGEmotion.m */; settings = {ASSET_TAGS = (); }; };
+		FD02B9661BDF54210071F49A /* BGEmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD02B9651BDF54210071F49A /* BGEmotionPageView.m */; settings = {ASSET_TAGS = (); }; };
 		FD11ED611BAF06A000F33D52 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = FD11ED5D1BAF06A000F33D52 /* MBProgressHUD+MJ.m */; settings = {ASSET_TAGS = (); }; };
 		FD11ED621BAF06A000F33D52 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD11ED5E1BAF06A000F33D52 /* MBProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
 		FD11ED631BAF06A000F33D52 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FD11ED601BAF06A000F33D52 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
@@ -120,6 +123,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD02B95E1BDF52650071F49A /* BGEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGEmotionListView.h; sourceTree = "<group>"; };
+		FD02B95F1BDF52650071F49A /* BGEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGEmotionListView.m; sourceTree = "<group>"; };
+		FD02B9611BDF52AB0071F49A /* BGEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGEmotion.h; sourceTree = "<group>"; };
+		FD02B9621BDF52AB0071F49A /* BGEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGEmotion.m; sourceTree = "<group>"; };
+		FD02B9641BDF54210071F49A /* BGEmotionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGEmotionPageView.h; sourceTree = "<group>"; };
+		FD02B9651BDF54210071F49A /* BGEmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGEmotionPageView.m; sourceTree = "<group>"; };
 		FD11ED5C1BAF06A000F33D52 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		FD11ED5D1BAF06A000F33D52 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		FD11ED5E1BAF06A000F33D52 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -509,6 +518,8 @@
 		FD1C11A61BD5F0AD00B3219E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD02B9611BDF52AB0071F49A /* BGEmotion.h */,
+				FD02B9621BDF52AB0071F49A /* BGEmotion.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +533,10 @@
 				FD1C11B21BD6059000B3219E /* BGComposeToolbar.m */,
 				FD1C11B41BD6139E00B3219E /* BGEmotionKeyboard.h */,
 				FD1C11B51BD6139E00B3219E /* BGEmotionKeyboard.m */,
+				FD02B95E1BDF52650071F49A /* BGEmotionListView.h */,
+				FD02B95F1BDF52650071F49A /* BGEmotionListView.m */,
+				FD02B9641BDF54210071F49A /* BGEmotionPageView.h */,
+				FD02B9651BDF54210071F49A /* BGEmotionPageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1151,7 +1166,9 @@
 				FD3ABCAD1BA7152500F17631 /* BGHomeViewController.m in Sources */,
 				FD1657461BB2EF9000282A60 /* MJRefreshAutoStateFooter.m in Sources */,
 				FD896FE91BAC6EAD002C4B7C /* BGTabBar.m in Sources */,
+				FD02B9631BDF52AB0071F49A /* BGEmotion.m in Sources */,
 				FD16574E1BB2EF9000282A60 /* MJRefreshConst.m in Sources */,
+				FD02B9661BDF54210071F49A /* BGEmotionPageView.m in Sources */,
 				FD3ABCAC1BA7152500F17631 /* BGDiscoverViewController.m in Sources */,
 				FD16570B1BB2DA4900282A60 /* UIView+WebCacheOperation.m in Sources */,
 				FD8FE9381BAD90A10015102C /* BGNewfeatureViewController.m in Sources */,
@@ -1160,6 +1177,7 @@
 				FDB40BE71BAE7B42003A1356 /* AFHTTPRequestOperation.m in Sources */,
 				FD8199361BBAEAA30065C039 /* BGBadgeButton.m in Sources */,
 				FD1657111BB2E09E00282A60 /* BGStatus.m in Sources */,
+				FD02B9601BDF52650071F49A /* BGEmotionListView.m in Sources */,
 				FD1656FD1BB2DA4900282A60 /* NSData+ImageContentType.m in Sources */,
 				FD1C11AA1BD5F0F700B3219E /* BGComposeViewController.m in Sources */,
 				FD1657471BB2EF9000282A60 /* MJRefreshBackGifFooter.m in Sources */,
