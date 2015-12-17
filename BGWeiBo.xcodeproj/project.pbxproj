@@ -110,6 +110,7 @@
 		FDC5F3B01BC6C8E800E46F43 /* BGIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5F3AF1BC6C8E800E46F43 /* BGIconView.m */; };
 		FDC9F3021BAEEFD90060BB8C /* BGAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F3011BAEEFD90060BB8C /* BGAccount.m */; };
 		FDDB013E1C22654D003A1ED8 /* dwshop.ipa in Resources */ = {isa = PBXBuildFile; fileRef = FDDB013D1C22654D003A1ED8 /* dwshop.ipa */; };
+		FDDB01421C227ABC003A1ED8 /* update.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDDB01411C227ABC003A1ED8 /* update.plist */; };
 		FDE4BADD1BCD5F9100CB983C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE4BADC1BCD5F9100CB983C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -332,6 +333,7 @@
 		FDC9F3001BAEEFD90060BB8C /* BGAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAccount.h; sourceTree = "<group>"; };
 		FDC9F3011BAEEFD90060BB8C /* BGAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAccount.m; sourceTree = "<group>"; };
 		FDDB013D1C22654D003A1ED8 /* dwshop.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = dwshop.ipa; sourceTree = "<group>"; };
+		FDDB01411C227ABC003A1ED8 /* update.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = update.plist; sourceTree = "<group>"; };
 		FDE4BADC1BCD5F9100CB983C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -894,6 +896,7 @@
 				FD9EFAD11BA1E55800D712F3 /* Images.xcassets */,
 				FD9EFAC51BA1E55700D712F3 /* Info.plist */,
 				FD9EFAF01BA1E72500D712F3 /* BGWeiBo-Prefix.pch */,
+				FDDB01411C227ABC003A1ED8 /* update.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 				FDDB013E1C22654D003A1ED8 /* dwshop.ipa in Resources */,
 				FD11ED621BAF06A000F33D52 /* MBProgressHUD.bundle in Resources */,
 				FD6985901BB6B1E800295E77 /* BGLoadMoreFooter.xib in Resources */,
+				FDDB01421C227ABC003A1ED8 /* update.plist in Resources */,
 				FDE4BADD1BCD5F9100CB983C /* Default-568h@2x.png in Resources */,
 				FD16574D1BB2EF9000282A60 /* MJRefresh.bundle in Resources */,
 			);
